@@ -6,9 +6,12 @@ import dotenv from 'dotenv';
 // development
 import morgan from "morgan";
 import colors from 'colors';
+// importing files
+import connection from './config/database.js';
 
 const app = express();
 dotenv.config();
+connection();
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 
